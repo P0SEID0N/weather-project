@@ -1,0 +1,7 @@
+.weather-container {
+    background-color:white;
+    display: flex;
+    height:600px;
+    flex-direction: column;
+    border-radius: 10px;
+}

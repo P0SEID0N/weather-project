@@ -1,0 +1,20 @@
+{
+    "apiKey": "f110d8b0b2cd0f02c80cb0d5b6f9fe3d",
+    "geoData": {
+        "moscow": {
+            "name": "Moscow",
+            "lat": 55.755871,
+            "lon": 37.617680
+        },
+        "ottawa": {
+            "name": "Ottawa",
+            "lat": 45.424721,
+            "lon": -75.695000
+        },
+        "tokyo": {
+            "name": "Tokyo",
+            "lat": 35.689487,
+            "lon": 139.691711
+        }
+    }
+}

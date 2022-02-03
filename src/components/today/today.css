@@ -1,0 +1,45 @@
+.today-container {
+    display:flex;
+    flex:1.5;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #d4f2fc;
+    padding:5px;
+    border-radius:5px;
+    margin: 5px 5px 0 5px;
+    font-size: 20px;
+}
+
+.today-name {
+    font-size:30px;
+}
+
+.today-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.today-inner-col {
+    margin: 10px;
+}
+
+.weather-temp .day-temp{
+    font-size:50px;
+}
+
+.weather-icon {
+    font-size: 90px;
+    padding-top:3px;
+}
+
+.weather-type{
+    font-size:25px;
+}
+
+@media (max-width: 450px) {
+    .today-row {
+        flex-direction: column;
+        align-items: center;
+    }
+}

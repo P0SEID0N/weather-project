@@ -1,0 +1,28 @@
+.nav-bar {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.element {
+    flex:1;
+    text-align: center;
+    margin:3px;
+    padding:2px;
+    text-decoration: none;
+    color: black;
+    font-size: 35px;
+    text-transform: uppercase;
+}
+
+.active {
+    font-weight: bold;
+    color: #3586c4;
+}
+
+@media (max-width: 450px) {
+    .nav-bar {
+        flex-direction: column;
+    }
+}
+
