@@ -32,7 +32,7 @@ class Today extends Component<TodayProps,{}> {
     }
 
     render() {
-       return(this.props.weather && this.props.temperature ? this.todayElement() : <Loader/>)
+       return((this.props.weather && this.props.temperature) && !this.props.isloading ? this.todayElement() : <Loader/>)
     }
 
 }

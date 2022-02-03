@@ -39,7 +39,7 @@ class NextFour extends Component<nextFourProps, nextFourState> {
     }
 
     render() {
-        return(this.props.forecast ? this.forecastElement() : <Loader/>)
+        return(this.props.forecast && !this.props.isloading ? this.forecastElement() : <Loader/>)
     }
 
 }

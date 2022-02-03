@@ -21,6 +21,7 @@ class WeatherDisplay extends Component<WeatherProps, WeatherState> {
                 icon: ''
             },
             fourDayForecast: [],
+            loading: false
         }
     }
 
@@ -34,6 +35,8 @@ class WeatherDisplay extends Component<WeatherProps, WeatherState> {
             excludes: "minutely,hourly,alerts"
         };
 
+        this.setState({loading:true});
+
         fetch(`https://api.openweathermap.org/data/2.5/onecall?${formatGetRequest(payload)}`)
         .then(res => res.json())
         .then(response => {
@@ -44,7 +47,10 @@ class WeatherDisplay extends Component<WeatherProps, WeatherState> {
                     fourDayForecast: response.daily.slice(0,4)
             });
         })
-        .catch(error => console.log("An error has occured with the call to api.openweathermap.org please contact a system admin"));
+        .catch(error => console.log("An error has occured with the call to api.openweathermap.org please contact a system admin"))
+        .finally(() => {
+            this.setState({loading:false});
+        });
     }
 
     componentDidMount = () => {
@@ -61,8 +67,8 @@ class WeatherDisplay extends Component<WeatherProps, WeatherState> {
     render() {
         return (
             <div className="weather-container">
-                <Today weather={this.state.currentForecast} temperature={this.state.currentTemp}/>
-                <NextFour forecast={this.state.fourDayForecast}/>
+                <Today weather={this.state.currentForecast} temperature={this.state.currentTemp} isloading={this.state.loading}/>
+                <NextFour forecast={this.state.fourDayForecast} isloading={this.state.loading}/>
             </div>
         )
     }

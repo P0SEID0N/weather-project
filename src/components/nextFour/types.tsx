@@ -16,7 +16,8 @@ export interface forecastInterface {
 }
 
 export interface nextFourProps {
-    forecast: forecastInterface[]
+    forecast: forecastInterface[],
+    isloading: boolean
 }
 
 export interface nextFourState {

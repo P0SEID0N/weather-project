@@ -2,5 +2,6 @@ import { weatherType } from "../../globalTypes/weatherType";
 
 export interface TodayProps {
     weather: weatherType,
-    temperature: number
+    temperature: number,
+    isloading: boolean
 }

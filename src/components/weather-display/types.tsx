@@ -12,4 +12,5 @@ export interface WeatherProps {
       currentTemp: number;
       currentForecast: weatherType;
       fourDayForecast: forecastInterface[];
+      loading: boolean;
   }
