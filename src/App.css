@@ -17,3 +17,10 @@ body {
 .day-temp {
   font-weight: bold;
 }
+
+@media (max-width: 800px) {
+  .App {
+    height:100vh;
+    overflow-y:auto;
+  }
+}
